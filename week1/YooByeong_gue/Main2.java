@@ -3,8 +3,6 @@ package week1.YooByeong_gue;
 import java.util.HashSet;
 
 public class Main2 {
-}
-class Solution {
     public int solution(int[] nums) {
         int answer = nums.length/2;
         HashSet<Integer> set = new HashSet<>();
