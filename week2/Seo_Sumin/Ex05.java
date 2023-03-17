@@ -28,7 +28,7 @@ public class Ex05 {
     }
 
     public int solution(int bridge_length, int weight, int[] truck_weights) {
-        int time = -1;
+        int time = 0;
         int end = 0;
         Queue<Truck> start = new LinkedList<>();
         Queue<Truck> middle = new LinkedList<>();
@@ -72,7 +72,8 @@ public class Ex05 {
     }
 
     private static int moveMiddleTruck(int end, Queue<Truck> middle) {
-        for (Truck t : middle) {
+        Queue<Truck> temp = new LinkedList<>(middle);
+        for (Truck t : temp) {
             if (t.position == 1) {  //첫번째면 빼기
                 middle.poll();
                 end++;
@@ -128,8 +129,8 @@ public class Ex05 {
 
     public static void main(String[] args) {
         Ex05 t = new Ex05();
-        System.out.println("t = " + t.solution1(2,10,new int [] {7,4,5,6}));
-        System.out.println("t = " + t.solution1(100,100,new int [] {10}));
-        System.out.println("t = " + t.solution1(100,100,new int [] {10,10,10,10,10,10,10,10,10,10}));
+        //System.out.println("t = " + t.solution(2,10,new int [] {7,4,5,6}));
+        //System.out.println("t = " + t.solution(100,100,new int [] {10}));
+        System.out.println("t = " + t.solution(100,100,new int [] {10,10,10,10,10,10,10,10,10,10}));
     }
 }
