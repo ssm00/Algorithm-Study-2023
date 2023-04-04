@@ -18,7 +18,6 @@ public class Ex03 {
                 answer++;
             }
         }
-
         return answer;
     }
 
