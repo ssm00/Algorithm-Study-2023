@@ -69,7 +69,7 @@ public class Ex03 {
     }
 
     public static void main(String[] args) {
-        String num1 = "1231";
+        String num1 = "17";
         String num2 = "23";
         Ex03 ex03 = new Ex03();
         System.out.println("ex03 = " + ex03.solution(num1));
